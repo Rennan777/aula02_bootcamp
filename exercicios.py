@@ -86,10 +86,30 @@ print(string1 + string2)
 # #### Booleanos (`bool`)
 
 # 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
+exp1 = input('Digite uma expressão booleana(True/False): ')
+exp2 = input('Digite outra expressão booleana(True/False): ')
+result = bool(eval(exp1) and eval(exp2))
+print(f'O resultado da expressão AND entre "{exp1}" e "{exp2}" é {result}')
+
 # 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
+exp1 = input('Digite uma expressão booleana(True/False): ')
+exp2 = input('Digite outra expressão booleana(True/False): ')
+result = eval(exp1) or eval(exp2)
+print(f'O resultado da expressão OR entre "{exp1}" e "{exp2}" é {result}')
+
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+valor = eval(input('Digite um valor booleano(True/False): '))
+print(f'O valor invertido é {not valor}')
+
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+numero1 = int(input("digite um numero inteiro: "))
+numero2 = int(input("digite outro numero inteiro: "))
+print(f'O numero {numero1} é igual ao {numero2}? R: {numero1 == numero2}')
+
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+numero1 = int(input("digite um numero: "))
+numero2 = int(input("digite outro numero: "))
+print(f'O numero {numero1} é diferente ao {numero2}? R: {numero1 != numero2}')
 
 # #### try-except e if
 
