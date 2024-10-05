@@ -32,18 +32,56 @@ print(f"O quadrado de {numero} é {quadrado}")
 # #### Números de Ponto Flutuante (`float`)
 
 # 6. Escreva um programa que receba dois números flutuantes e realize sua adição.
+n1 = float(input('Digite um numero real: '))
+n2 =float(input('Digite outro numero real: '))
+total = n1 + n2
+print(f'A soma de {n1} + {n2} é igual a {total}')
+
 # 7. Crie um programa que calcule a média de dois números flutuantes fornecidos pelo usuário.
+n1 = float(input('Digite um numero real: '))
+n2 = float(input('Digite outro numero real: '))
+media = (n1 + n2) / 2
+print(f'A media de {n1} + {n2} é {media}')
+
 # 8. Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
+base = float(input('Digite o numero base: '))
+exp = float(input('Digite o expoente: '))
+potencia = base ** exp
+print(f'{base} elevado a {potencia} é igual a {potencia}')
+
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
+celsius = float(input('Digite a temperatuda em graus celsius: '))
+fahrenheit = celsius * 1.8 + 32
+print(f'{celsius} em graus celsius equivale a {fahrenheit} em graus fahrenheit')
+
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
+raio = float(input('Digite o raio do circulo: '))
+area = 3.14 * (raio ** 2)
+print(f'A área do circulo de raio {raio} é {area}')
 
 # #### Strings (`str`)
 
 # 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
+frase = str(input('Digite uma frase (minuscula): '))
+print(frase.upper())
+
 # 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
+nome = str(input('Digite seu nome completo: '))
+print(nome.lower())
+
 # 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
+frase = str(input('Digite uma frase: '))
+print(frase.strip())
+
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
+data = str(input('Digite uma data no formato dd/mm/aaaa: '))
+dia, mes, ano = data.split('/')
+print(f'Dia {dia} do Mes {mes} do Ano {ano}')
+
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
+string1 = str(input('Digite uma string: '))
+string2 = str(input('Digite outra string: '))
+print(string1 + string2)
 
 # #### Booleanos (`bool`)
 
