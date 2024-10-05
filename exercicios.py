@@ -114,7 +114,72 @@ print(f'O numero {numero1} é diferente ao {numero2}? R: {numero1 != numero2}')
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+try:
+    celsius = input('Digite a temperatuda em graus celsius: ')
+    fahrenheit = (float(celsius) * 1.8) + 32
+    print(f'{celsius} graus celsius equivale a {fahrenheit:.2f} graus fahrenheit')
+except ValueError as erro:
+    print('Digite um numero valido!')
+
 # 22: Verificador de Palíndromo
+texto = input("digite um texto: ")
+invertido = texto[::-1]
+
+if texto == invertido:
+    print("E palíndromo")
+else:
+    print("Não é palíndromo")
+
 # 23: Calculadora Simples
+try:
+    numero1 = float(input('Digite um numero: '))
+    numero2 = float(input('Digite outro numero: '))
+    operacao = input('Digite a operação que deseja realizar (+, -, *, /): ')
+
+    if operacao == '+':
+        print(f'{numero1} + {numero2} = {numero1 + numero2}')
+    elif operacao == '-':
+        print(f'{numero1} - {numero2} = {numero1 - numero2}')
+    elif operacao == '*':
+        print(f'{numero1} * {numero2} = {numero1 * numero2}')
+    elif operacao == '/':
+        try:
+            print(f'{numero1} / {numero2} = {numero1 / numero2}')
+        except ZeroDivisionError:
+            print('O denominador deve ser diferente de zero!')
+    else:
+        print(f'Operação selecionada inválida! {operacao}')
+except ValueError:
+    print('Entrada inválida! Digite numeros!')
+
 # 24: Classificador de Números
+
+try:
+    numero = float(input('Digite um numero: '))
+    if numero > 0:
+        print('O número informado é positivo!')
+    elif numero < 0:
+        print('O número informado é negativo!')
+    else:
+        print('O número informado é 0!')
+    if numero == 0:
+        pass
+    else:
+        if numero % 2 == 0:
+            print('O número informado é par!')
+        else:
+            print('O número informado é impar!')
+except ValueError:
+    print('Entrada inválida! Digite apenas números!')
+
 # 25: Conversão de Tipo com Validação
+lista = input('Digite uma lista de valores separados por virgulas: ')
+lista = lista.split(',')
+nova_lista = []
+try:
+    for i in lista:
+        i == i.isnumeric()
+        nova_lista.append(int(i))
+    print(f'Lista de inteiros: {nova_lista}')
+except ValueError:
+    print('Entrada inválida! Digite somente inteiros!')
